@@ -39545,15 +39545,16 @@ exports.push([module.i, "\n#contract-info input, #contract-info select {\n  disp
 //
 //
 //
+//
 
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      address: '0xc6d9d30a49c7a3fb7759a0bab91344408497d556',
-      abi: '[{"constant":false,"inputs":[{"name":"usernameHash","type":"bytes32"},{"name":"fileHash","type":"string"}],"name":"updateContacts","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"usernameHash","type":"bytes32"},{"name":"encryptedUsername","type":"string"},{"name":"publicKey","type":"string"}],"name":"registerUser","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"recipients","type":"address[]"},{"name":"mailHash","type":"string"},{"name":"threadHash","type":"string"},{"name":"threadId","type":"bytes32"}],"name":"sendEmail","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"externalContractAddress","type":"address"},{"name":"recipients","type":"address[]"},{"name":"mailHash","type":"string"},{"name":"threadHash","type":"string"},{"name":"threadId","type":"bytes32"}],"name":"sendExternalEmail","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"usernameHash","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"},{"indexed":false,"name":"encryptedUsername","type":"string"},{"indexed":false,"name":"publicKey","type":"string"}],"name":"UserRegistered","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"mailHash","type":"string"},{"indexed":false,"name":"threadHash","type":"string"},{"indexed":true,"name":"threadId","type":"bytes32"}],"name":"EmailSent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"usernameHash","type":"bytes32"},{"indexed":false,"name":"fileHash","type":"string"}],"name":"ContactsUpdated","type":"event"}]',
-      network: 42,
+      address: '',
+      abi: '',
+      network: 1,
       error: ''
     };
   },
@@ -39678,6 +39679,8 @@ var render = function() {
           },
           [
             _c("option", { attrs: { value: "1" } }, [_vm._v("Main")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "3" } }, [_vm._v("Ropsten")]),
             _vm._v(" "),
             _c("option", { attrs: { value: "42" } }, [_vm._v("Kovan")])
           ]
@@ -40435,7 +40438,7 @@ var etherscanNetworks = {
 };
 
 var init = function init(networkId) {
-  if (networkId === 1) web3.setProvider(new web3.providers.HttpProvider('https://mainnet.decenter.com'));else if (networkId === 42) web3.setProvider(new web3.providers.HttpProvider('https://kovan.decenter.com'));else console.error('Invalid network ID');
+  if (networkId === 1) web3.setProvider(new web3.providers.HttpProvider('https://mainnet.decenter.com'));else if (networkId === 3) web3.setProvider(new web3.providers.HttpProvider('https://ropsten.decenter.com'));else if (networkId === 42) web3.setProvider(new web3.providers.HttpProvider('https://kovan.decenter.com'));else console.error('Invalid network ID');
 };
 
 var getEvents = function getEvents(contract, eventName) {

@@ -10,6 +10,7 @@ export const etherscanNetworks = {
 
 export const init = (networkId) => {
   if (networkId === 1) web3.setProvider(new web3.providers.HttpProvider('https://mainnet.decenter.com'));
+  else if (networkId === 3) web3.setProvider(new web3.providers.HttpProvider('https://ropsten.decenter.com'));
   else if (networkId === 42) web3.setProvider(new web3.providers.HttpProvider('https://kovan.decenter.com'));
   else console.error('Invalid network ID');
 };
